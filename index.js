@@ -89,6 +89,6 @@ app.get("/", (request, response) => {
 });
 
 // setup server to listen on port :3131
-app.listen(3131, () =>
+app.listen(3000, () =>
   console.log("Express server is ready on localhost:3131")
 );
