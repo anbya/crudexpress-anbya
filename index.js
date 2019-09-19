@@ -6,6 +6,7 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+const PORT = process.env.PORT || 3000;
 // setup a `/` endpoint
 app.get("/items", (req, res) => {
   let newItemsArray = items.sort(function(first, second) {
@@ -89,6 +90,6 @@ app.get("/", (request, response) => {
 });
 
 // setup server to listen on port :3131
-app.listen(3000, () =>
+app.listen(PORT, () =>
   console.log("Express server is ready on localhost:3131")
 );
